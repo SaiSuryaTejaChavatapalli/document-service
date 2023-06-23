@@ -6,8 +6,10 @@ const multerS3 = require('multer-s3');
 const path = require('path');
 const uuid = require('uuid').v4;
 const MongoClient = require('mongodb').MongoClient;
+const cors = require('cors');
 
 const app = express();
+app.use(cors());
 
 MongoClient.connect(process.env.DBURL, { useNewUrlParser: true })
 .then(client => {
@@ -35,7 +37,6 @@ const upload = multer({
 });
 
 // app.use(express.static('public'));
-
 
 // create a route for uploading file along the metadata
 app.post('/upload', upload.single('file'), (req, res) => {
