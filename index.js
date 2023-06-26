@@ -19,19 +19,7 @@ app.use(cors());
 // make app use home_router
 app.use('/', home_router);
 
-// app.use(express.static('public'));
-
-// create a route for deleting files
-// below router is deleting file data from mongodb but files in s3 are not deleted
-// app.delete('/delete/:fileName', (req, res) => {
-//     const fileName = req.params.fileName;
-//     const technothonCollection = req.app.locals.technothonCollection;
-//     technothonCollection.deleteOne({ originalname: fileName }).then(result => {
-//         return res.json({ status: 'success', result: result });
-//     }).catch(err => {
-//         return res.json({ status: 'error', message: err });
-//     });
-// });
+app.use(express.static('views'));
 
 //write code to run the server
 app.listen(process.env.PORT || 3000, () => {
