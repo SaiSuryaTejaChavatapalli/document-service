@@ -22,7 +22,7 @@ const s3 = new aws.S3({
 const upload = multer({
     storage: multers3({
         s3: s3,
-        bucket: 'technothon69',
+        bucket: process.env.AWS_BUCKET_NAME,
         // create acl key with value public-read
         acl: 'public-read',
         // create metadata key with value fieldName
@@ -41,3 +41,4 @@ const upload = multer({
 
 // export upload
 module.exports = upload;
+module.exports.s3 = s3;
