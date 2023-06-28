@@ -27,8 +27,17 @@ Install dependencies:
 ```
 npm install
 ```
+
 Set your credentials as environment variables
 
+```
+AWS_ACCESS_KEY_ID = <YOUR_AWS_ACCESS_KEY_ID>
+AWS_SECRET_ACCESS_KEY = <YOUR_AWS_SECRET_ACCESS_KEY>
+AWS_BUCKET_NAME = <YOUR_AWS_BUCKET_NAME>
+REGION = <YOUR_AWS_REGION>
+DBURL = <MONGO_DB_URL>
+PORT = <PORT_NUMBER>
+```
 
 Start the server:
 
