@@ -28,8 +28,8 @@ Install dependencies:
 npm install
 ```
 
-Set your credentials as environment variables
-
+Set your credentials as environment variables <br/>
+create a .env file in root directory and enter your below credentials.
 ```
 AWS_ACCESS_KEY_ID = <YOUR_AWS_ACCESS_KEY_ID>
 AWS_SECRET_ACCESS_KEY = <YOUR_AWS_SECRET_ACCESS_KEY>
