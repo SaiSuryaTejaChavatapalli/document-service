@@ -18,7 +18,7 @@ const s3 = new aws.S3({
     region: process.env.AWS_REGION
 });
 
-// create the multer which has storage of multer-s3 and multers3 has bucket name technothon69
+// create the multer which has storage of multer-s3 and multers3 has bucket name AWS_BUCKET_NAME from environment variables
 const upload = multer({
     storage: multers3({
         s3: s3,
